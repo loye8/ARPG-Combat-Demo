@@ -50,7 +50,7 @@ namespace ARPGCombat.Core
             _applicationIsQuitting = true;  
         }
 
-        protected virtual void OnDestory()
+        protected virtual void OnDestroy()
         {
             if(_instance == this)
                 _instance = null;
