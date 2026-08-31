@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021a75853902f8840826bf9b5b0bd48d, type: 3}
+  m_Name: SkillQConfig
+  m_EditorClassIdentifier: 
+  skillName: "\"\u70C8\u7130\u65A9\" "
+  description: "\"\u524D\u65B9\u6247\u5F62\u706B\u7130\u65A9\u51FB\""
+  icon: {fileID: 0}
+  skillId: 0
+  baseDamage: 40
+  criticalChance: 0.25
+  criticalMultiplier: 1.8
+  effectRadius: 40
+  effectAngle: 90
+  cooldown: 6
+  resourceCost: 25
+  effectPrefabPath: 
+  animTriggerName: SkillQ
+  windup: 0.35

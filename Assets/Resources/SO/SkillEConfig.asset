@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021a75853902f8840826bf9b5b0bd48d, type: 3}
+  m_Name: SkillEConfig
+  m_EditorClassIdentifier: 
+  skillName: "\"\u51B0\u971C\u65B0\u661F\""
+  description: "\"\u5468\u8EAB\u5706\u5F62\u51B0\u51BB\u7206\u53D1\""
+  icon: {fileID: 0}
+  skillId: 1
+  baseDamage: 30
+  criticalChance: 0
+  criticalMultiplier: 1
+  effectRadius: 5
+  effectAngle: 360
+  cooldown: 8
+  resourceCost: 20
+  effectPrefabPath: 
+  animTriggerName: SkillE
+  windup: 0.3
