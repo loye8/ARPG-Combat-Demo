@@ -6,11 +6,39 @@ namespace ARPGCombat.MVC.View
 {
     public class UIManager : MonoBehaviour
     {
-        [SerializeField] private PlayerHUDView hudView;
+        [SerializeField] private GameObject hudPrefab;
         [SerializeField] private EnemyHUDView enemyHUDView;
         [SerializeField] private DamageNumberLayer damageLayer;
         [SerializeField] private PanelViewController panels;
-        [SerializeField] private SkillBarView skillBar;
+
+        private PlayerHUDView hudView;
+        private SkillBarView skillBar;
+        private GameObject hudInstance;
+
+        public GameObject HudInstance => hudInstance;
+
+        private void Awake() => CreateHud();
+
+        private void CreateHud()
+        {
+            if (hudPrefab == null)
+            {
+                Debug.LogError("[UIManager] 未指定 HUD 预制体（hudPrefab），HUD 不会显示。");
+                return;
+            }
+
+            hudInstance = Instantiate(hudPrefab, transform, false);
+            hudInstance.name = hudPrefab.name;
+
+            hudView = hudInstance.GetComponentInChildren<PlayerHUDView>(true);
+            skillBar = hudInstance.GetComponentInChildren<SkillBarView>(true);
+
+            if (hudView == null)
+                Debug.LogWarning("[UIManager] HUD 预制体里没有找到 PlayerHUDView。");
+            if (skillBar == null)
+                Debug.LogWarning("[UIManager] HUD 预制体里没有找到 SkillBarView。");
+        }
+
         private void OnEnable()
         {
             var ec = EventCenter.Instance;
